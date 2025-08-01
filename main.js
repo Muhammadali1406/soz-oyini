@@ -14,7 +14,7 @@ const record = document.querySelector('.record')
 const modal_wrapper = document.querySelector('.modal-wrapper')
 
 let index = 0, tenw = [], wordanimate = 0, interval = 0
-let arr = [], tim = 120, e = 0, start = 0
+let arr = [], tim = 40, e = 0, start = 0
 let topilgansozlar = 0, errorwords = 0
 let sozlar = []
 // <<<functions>>>
@@ -130,7 +130,7 @@ btn0.addEventListener('click', function () {
     clearInterval(wordanimate)
     arr = mixedword(sozlar)
     start += 1
-    tim = 120
+    tim = 40
     btn0.disabled = true
     wordmix.textContent = mixedword((arr[e][0].toUpperCase() + arr[e].slice(1)))
     interval = setInterval(() => {
@@ -186,12 +186,12 @@ rebtn.addEventListener('click', () => {
     index = 0
     tenw = []
     arr = []
-    tim = 120
+    tim = 40
     e = 0
     start = 0
     topilgansozlar = 0
     errorwords = 0
-    time.textContent = '2 minutes or 120 seconds'
+    time.textContent = 'Time: 40 seconds'
     input.style.backgroundColor = "#6dd285"
     input.value = ''
     modal_wrapper.style.display = 'none'
