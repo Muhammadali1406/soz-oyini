@@ -19,7 +19,7 @@ let topilgansozlar = 0, errorwords = 0
 let sozlar = []
 // <<<functions>>>
 function chek() {
-    if (input.value == arr[e]) {
+    if ((input.value).toLowerCase() == arr[e]) {
         e += 1
         input.style.backgroundColor = "#6dd285"
         wordmix.textContent = mixedword((arr[e][0].toUpperCase() + arr[e].slice(1)))
