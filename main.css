@@ -277,3 +277,10 @@ a {
     color: #0fc82b;
     text-align: center;
 }
+
+
+@media only screen and (max-width: 640px) {
+    .izoh{
+        font-size: 12px;
+    }
+}
