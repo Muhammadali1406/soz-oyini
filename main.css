@@ -39,8 +39,9 @@ body {
         padding: 16px;
         background-color: #6dd285;
     }
-    header{
-        h2{
+
+    header {
+        h2 {
             color: #0fc82b;
             background: #0000005a;
             padding: 10px;
@@ -80,7 +81,7 @@ body {
     }
 
 
-    .modal {
+    .modal, .modals {
         display: flex;
         flex-direction: column;
         margin-left: auto;
@@ -109,6 +110,26 @@ body {
             display: flex;
             justify-content: space-between;
         }
+
+        a{
+            color: #485555;
+            text-decoration: none;
+            width: 100%;
+            background-color: #00ff9d;
+            border-radius: 13px;
+            padding: 10px;
+            border: 1px solid blue;
+            transition: all .3s ease;
+            &:hover, &:active{
+                background-color: #4f9ee3;
+                color: rgb(219, 248, 249);
+            }
+        }
+    }
+
+    .modals{
+        display: none;
+        
     }
 
 }
@@ -137,48 +158,55 @@ main {
 
     .bg1 {
         background-image: url(./images/hayvonalr.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
     }
 
     .bg2 {
         background-image: url(./images/qushlar.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
     }
 
     .bg3 {
         background-image: url(./images/hasharotlar.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
     }
 
     .bg4 {
         background-image: url(./images/items.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
     }
 
     .bg5 {
         background-image: url(./images/aralash.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
+    }
+
+    .bg6 {
+        background-image: url(./images/cities.jpg);
+    }
+
+    .bg7 {
+        background-image: url(./images/kasblar.jpg);
+    }
+
+    .bg8 {
+        background-image: url(./images/atamalar.jpg);
+    }
+
+    .bg9 {
+        background-image: url(./images//countries.jpg);
+    }
+
+    .bg10 {
+        background-image: url(./images/osimliklar.jpg);
     }
 }
 
-a {
+button {
     text-decoration: none;
     text-align: center;
-    color: #90ff3a;
+    color: #6fff00;
 
     h2,
     p {
-        background-color: rgba(0, 0, 0, 0.427);
+        background-image: url(./images/card-bg.jpg);
+        padding: 5px;
+        border-radius: 5px;
     }
 }
 
@@ -199,6 +227,9 @@ a {
     gap: 40px;
     border-radius: 14px;
     padding: 26px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .foter {
@@ -222,6 +253,8 @@ a {
 
 .starter {
     animation: identifier 700ms infinite ease;
+    color: black;
+    background-image: url(./images/card-bg.jpg);
 }
 
 @keyframes identifier {
@@ -264,6 +297,10 @@ a {
     justify-content: center;
 }
 
+.hidden{
+    display: none;
+}
+
 
 .natija,
 .natija2 {
@@ -280,7 +317,7 @@ a {
 
 
 @media only screen and (max-width: 640px) {
-    .izoh{
+    .izoh {
         font-size: 12px;
     }
 }
