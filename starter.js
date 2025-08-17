@@ -16,16 +16,16 @@ const modals = document.querySelector('.modals')
 const a = document.querySelectorAll('a')
 const res = []
 
-result_ofh.textContent = `Natija: ${localStorage.getItem('hnatija') ?? 0}`
-result_ofq.textContent = `Natija: ${localStorage.getItem('qnatija') ?? 0}`
-result_ofb.textContent = `Natija: ${localStorage.getItem('bnatija') ?? 0}`
-result_ofx.textContent = `Natija: ${localStorage.getItem('xnatija') ?? 0}`
-result_ofm.textContent = `Natija: ${localStorage.getItem('mnatija') ?? 0}`
-result_ofo.textContent = `Natija: ${localStorage.getItem('onatija') ?? 0}`
-result_ofk.textContent = `Natija: ${localStorage.getItem('knatija') ?? 0}`
-result_ofsh.textContent = `Natija: ${localStorage.getItem('shnatija') ?? 0}`
-result_ofma.textContent = `Natija: ${localStorage.getItem('manatija') ?? 0}`
-result_ofia.textContent = `Natija: ${localStorage.getItem('ianatija') ?? 0}`
+result_ofh.textContent = `Natija: ${localStorage.getItem('hnatija') || 0}`
+result_ofq.textContent = `Natija: ${localStorage.getItem('qnatija') || 0}`
+result_ofb.textContent = `Natija: ${localStorage.getItem('bnatija') || 0}`
+result_ofx.textContent = `Natija: ${localStorage.getItem('xnatija') || 0}`
+result_ofm.textContent = `Natija: ${localStorage.getItem('mnatija') || 0}`
+result_ofo.textContent = `Natija: ${localStorage.getItem('onatija') || 0}`
+result_ofk.textContent = `Natija: ${localStorage.getItem('knatija') || 0}`
+result_ofsh.textContent = `Natija: ${localStorage.getItem('shnatija') || 0}`
+result_ofma.textContent = `Natija: ${localStorage.getItem('manatija') || 0}`
+result_ofia.textContent = `Natija: ${localStorage.getItem('ianatija') || 0}`
 
 starter.addEventListener('click', () => {
     starter.style.display = 'none'
