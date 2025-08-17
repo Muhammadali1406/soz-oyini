@@ -314,7 +314,7 @@ rebtn.addEventListener('click', () => {
             localStorage.setItem('ianatija', topilgansozlar)
             break
         case "O'simliklar":
-            localStorage.setItem('mnatija', topilgansozlar)
+            localStorage.setItem('onatija', topilgansozlar)
             break
     }
     record.textContent = `Record: ${topilgansozlar}`
