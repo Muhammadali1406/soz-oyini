@@ -36,140 +36,34 @@ function chek() {
 }
 // <<<find which part>>>
 function findepart(res) {
-    console.log(res);
-    switch (res[0]) {
-        case "Hayvonlar":
-            switch (res[1]) {
-                case 'Easy👌':
-                    sozlar = [...(hayvonlar.easy)]
-                    break;
-                case 'Medium😉':
-                    sozlar = [...(hayvonlar.medium)]
-                    break;
-                case 'Hard👿':
-                    sozlar = [...(hayvonlar.hard)]
-                    break;
-            }
-            break;
-        case "Qushlar":
-            switch (res[1]) {
-                case 'Easy👌':
-                    sozlar = [...(qushlar.easy)]
-                    break;
-                case 'Medium😉':
-                    sozlar = [...(qushlar.medium)]
-                    break;
-                case 'Hard👿':
-                    sozlar = [...(qushlar.hard)]
-                    break;
-            }
-            break;
-        case "Hasharotlar":
-            switch (res[1]) {
-                case 'Easy👌':
-                    sozlar = [...(hasharotlar.easy)]
-                    break;
-                case 'Medium😉':
-                    sozlar = [...(hasharotlar.medium)]
-                    break;
-                case 'Hard👿':
-                    sozlar = [...(hasharotlar.hard)]
-                    break;
-            }
-            break;
-        case "Buyumlar":
-            switch (res[1]) {
-                case 'Easy👌':
-                    sozlar = [...(buyumlar.easy)]
-                    break;
-                case 'Medium😉':
-                    sozlar = [...(buyumlar.medium)]
-                    break;
-                case 'Hard👿':
-                    sozlar = [...(buyumlar.hard)]
-                    break;
-            }
-            break;
-        case "Aralash":
-            switch (res[1]) {
-                case 'Easy👌':
-                    sozlar = [...(aralash.easy)]
-                    break;
-                case 'Medium😉':
-                    sozlar = [...(aralash.medium)]
-                    break;
-                case 'Hard👿':
-                    sozlar = [...(aralash.hard)]
-                    break;
-            }
-            break;
-        case "Shaharlar":
-            switch (res[1]) {
-                case 'Easy👌':
-                    sozlar = [...(shaharlar.easy)]
-                    break;
-                case 'Medium😉':
-                    sozlar = [...(shaharlar.medium)]
-                    break;
-                case 'Hard👿':
-                    sozlar = [...(shaharlar.hard)]
-                    break;
-            }
-            break;
-        case "Mamlakatlar":
-            switch (res[1]) {
-                case 'Easy👌':
-                    sozlar = [...(mamlakatlar.easy)]
-                    break;
-                case 'Medium😉':
-                    sozlar = [...(mamlakatlar.medium)]
-                    break;
-                case 'Hard👿':
-                    sozlar = [...(mamlakatlar.hard)]
-                    break;
-            }
-            break;
-        case "Ilmiy Atamalar":
-            switch (res[1]) {
-                case 'Easy👌':
-                    sozlar = [...(ilmiyAtamalar.easy)]
-                    break;
-                case 'Medium😉':
-                    sozlar = [...(ilmiyAtamalar.medium)]
-                    break;
-                case 'Hard👿':
-                    sozlar = [...(ilmiyAtamalar.hard)]
-                    break;
-            }
-            break;
-        case "Kasblar":
-            switch (res[1]) {
-                case 'Easy👌':
-                    sozlar = [...(kasblar.easy)]
-                    break;
-                case 'Medium😉':
-                    sozlar = [...(kasblar.medium)]
-                    break;
-                case 'Hard👿':
-                    sozlar = [...(kasblar.hard)]
-                    break;
-            }
-            break;
-        case "O`simliklar":
-            switch (res[1]) {
-                case 'Easy👌':
-                    sozlar = [...(osimliklar.easy)]
-                    break;
-                case 'Medium😉':
-                    sozlar = [...(osimliklar.medium)]
-                    break;
-                case 'Hard👿':
-                    sozlar = [...(osimliklar.hard)]
-                    break;
-            }
-            break;
+    let degree = localStorage.getItem('degree');
+
+    let categories = {
+        "Hayvonlar": hayvonlar,
+        "Qushlar": qushlar,
+        "Hasharotlar": hasharotlar,
+        "Buyumlar": buyumlar,
+        "Aralash": aralash,
+        "Shaharlar": shaharlar,
+        "Mamlakatlar": mamlakatlar,
+        "Ilmiy Atamalar": ilmiyAtamalar,
+        "Kasblar": kasblar,
+        "O'simliklar": osimliklar
+    };
+
+    let degrees = {
+        "Easy👌": "easy",
+        "Medium😉": "medium",
+        "Hard👿": "hard"
+    };
+
+    if (categories[res] && degrees[degree]) {
+        return [...categories[res][degrees[degree]]];
     }
+
+    return [];
 }
+
 // main function
 function chek2() {
     input.value = ''
@@ -243,7 +137,7 @@ let localin = localStorage.getItem("Part").split(',').filter(el => el != '')
 record.textContent = `Record ${localin[1]}`
 animate()
 btn0.addEventListener('click', function () {
-    findepart([localin[0], localin[2]])
+    sozlar= findepart([localin[0]])
     clearInterval(wordanimate)
     arr = mixedword(sozlar)
     start += 1
@@ -288,34 +182,35 @@ rebtn.addEventListener('click', () => {
     switch (localin[0]) {
         case "Hayvonlar":
             localStorage.setItem('hnatija', topilgansozlar)
-            break
+            break;
         case "Qushlar":
             localStorage.setItem('qnatija', topilgansozlar)
-            break
+            break;
         case "Hasharotlar":
             localStorage.setItem('xnatija', topilgansozlar)
-            break
+            break;
         case "Buyumlar":
             localStorage.setItem('bnatija', topilgansozlar)
-            break
+            break;
         case "Aralash":
             localStorage.setItem('mnatija', topilgansozlar)
-            break
+            break;
         case "Kasblar":
             localStorage.setItem('knatija', topilgansozlar)
-            break
+            break;
         case "Shaharlar":
             localStorage.setItem('shnatija', topilgansozlar)
-            break
+            break;
         case "Mamlakatlar":
             localStorage.setItem('manatija', topilgansozlar)
-            break
+            break;
         case "Ilmiy Atamalar":
             localStorage.setItem('ianatija', topilgansozlar)
-            break
+            break;
         case "O'simliklar":
             localStorage.setItem('onatija', topilgansozlar)
-            break
+            console.log(topilgansozlar);
+            break;
     }
     record.textContent = `Record: ${topilgansozlar}`
     index = 0
@@ -329,6 +224,7 @@ rebtn.addEventListener('click', () => {
     input.style.backgroundColor = "#6dd285"
     input.value = ''
     modal_wrapper.style.display = 'none'
+    localStorage.removeItem('Part')
     animate()
 })
 

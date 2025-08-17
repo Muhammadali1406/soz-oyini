@@ -45,10 +45,10 @@ card.forEach((el => {
             res.push(ew.innerText)
         })
        hidden()
+       localStorage.setItem("Part", res)
        a.forEach(el=>{
         el.addEventListener('click', ()=>{
-            res.push(el.outerText)
-            localStorage.setItem("Part", res)
+            localStorage.setItem("degree", el.outerText)
         })
        })
     })
