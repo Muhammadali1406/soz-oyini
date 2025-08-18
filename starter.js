@@ -54,3 +54,12 @@ card.forEach((el => {
     })
 }))
 
+
+
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("Service Worker ro‘yxatdan o‘tdi ✅"))
+      .catch(err => console.log("Xatolik ❌", err));
+  }
+  
+
